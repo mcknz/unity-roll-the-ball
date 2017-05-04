@@ -3,6 +3,7 @@
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
+    public float speed;
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
             0.0f,
             moveVertical);
 
-        rb.AddForce(movement);
+        rb.AddForce(movement * speed);
 
     }
 }
